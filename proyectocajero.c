@@ -20,9 +20,9 @@ void mostrarOperacionesYSaldo(int indiceCliente, int cantOperaciones);
 
 int main()
 {
-    //COMPLETAR: aca debemos llamar a la funcion que carga los datos de los clientes en los arreglos
+    // COMPLETAR: aca debemos llamar a la funcion que carga los datos de los clientes en los arreglos
 
-    cargarClientes ();
+    cargarClientes();
 
     int indiceClienteActual = -1; // en esta variable vamos a almacenar el indice del cliente que inició sesión
                                   // la inicializamos en un valor de índice inválido
@@ -57,14 +57,14 @@ int main()
                     cantidadOperaciones++; // incremento en 1 la cantidad de operaciones realizadas
                     break;
                 case 2:
-                    //COMPLETAR: extracción
+                    // COMPLETAR: extracción
                     break;
                 case 3:
-                    //COMPLETAR: consulta de saldo
+                    // COMPLETAR: consulta de saldo
                     break;
                 case 4:
-                    //COMPLETAR: mostrar operaciones realizadas y saldo
-                    //  esta acción segun el enunciado no cuenta como operación realizada
+                    // COMPLETAR: mostrar operaciones realizadas y saldo
+                    //   esta acción segun el enunciado no cuenta como operación realizada
                     break;
                 case 5:
                     printf("Sesión finalizada. Gracias.\n\n");
@@ -208,43 +208,43 @@ void realizarDeposito(int indiceCliente)
     do
     {
 
-    printf("ingrese el monto a depositar: \n");
-    scanf("%f", &monto);
-    if (monto <= 0)
-    {
-        printf("el monto debe ser mayor a 0");
-    }
-    } while(monto <=0);
+        printf("ingrese el monto a depositar: \n");
+        scanf("%f", &monto);
+        if (monto <= 0)
+        {
+            printf("el monto debe ser mayor a 0");
+        }
+    } while (monto <= 0);
 
     saldos[indiceCliente] += monto;
-    printf("deposito correcto, saldo actual: $%.2f\n",saldos[indiceCliente]);
-    
+    printf("deposito correcto, saldo actual: $%.2f\n", saldos[indiceCliente]);
 }
 
 void realizarExtraccion(int indiceCliente)
 {
-     float monto;
+    float monto;
     do
     {
 
-    printf("ingrese el monto a retirar: \n");
-    scanf("%f", &monto);
-    if (monto <= 0 || saldos)
-    {
-        printf("el monto debe ser mayor a 0");
-    }
-    } while(monto <=0 || saldos);
+        printf("ingrese el monto a retirar: \n");
+        scanf("%f", &monto);
+        if (monto <= saldos)
+        {
+            printf("el monto debe ser mayor a 0");
+        }
+    } while (monto <= saldos);
 
     saldos[indiceCliente] -= monto;
-    printf("retiro completado, saldo actual: $%.2f\n",saldos[indiceCliente]);
+    printf("retiro completado, saldo actual: $%.2f\n", saldos[indiceCliente]);
 }
 
 void consultarSaldo(int indiceCliente)
 {
-    //COMPLETAR
+    saldos = saldos[indiceCliente];
+    printf("su saldo actual es: $%.2f\n", saldos[indiceCliente]); 
 }
 
 void mostrarOperacionesYSaldo(int indiceCliente, int cantOperaciones)
 {
-    //COMPLETAR    
+    // COMPLETAR
 }
